@@ -1,0 +1,40 @@
+<div class="container">
+  <p>
+    delete-employee works!<br>
+  </p>
+  <form name="form" #searchForm="ngForm">
+      <div class="form-group">
+        <label>Employee Id</label>
+        <input type="text"  name="Id" #name="ngModel" [(ngModel)]="Id" class="form-control"/>
+      </div>
+          <div class="form-group">
+          <input type="button" value="Search" (click)="onSubmit(Id)" class="btn btn-primary" />  &nbsp;
+          <input type="reset" value="Reset" class="btn btn-primary" /> &nbsp;
+          <input type="button" value="Delete" (click)="deleteEmployee(Id)" class="btn btn-primary" />
+          </div>
+    </form>
+  <table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>DOB</th>
+        <th>Salary</th>
+        <th>Gender</th>
+        <th>Is Married</th>
+        <th>Country Name</th>
+        <th>Region Name</th>
+    </tr>
+    <tr>
+        <td>{{allEmployee.Id}}</td>
+        <td>{{allEmployee.Name}}</td>
+        <td>{{allEmployee.Address}}</td>
+        <td>{{allEmployee.DOB|date}}</td>
+        <td>{{allEmployee.Salary}}</td>
+        <td>{{allEmployee.Gender}}</td>
+        <td>{{allEmployee.IsMarried}}</td>
+        <td>{{allEmployee.CountryName}}</td>
+        <td>{{allEmployee.RegionName}}</td>
+      </tr>
+  </table>
+  </div>

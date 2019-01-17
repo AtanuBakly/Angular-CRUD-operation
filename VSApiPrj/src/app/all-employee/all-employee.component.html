@@ -1,0 +1,29 @@
+<div class="container">
+<p>
+  all-employee works!
+</p>
+<table border="1">
+  <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>DOB</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      <th>IsMarried</th>
+      <th>Country Name</th>
+      <th>Region Name</th>
+  </tr>
+  <tr *ngFor="let itmemp of allEmployee">
+    <td>{{itmemp.Id}}</td>
+    <td>{{itmemp.Name}}</td>
+    <td>{{itmemp.Address}}</td>
+    <td>{{itmemp.DOB|date}}</td>
+    <td>{{itmemp.Salary}}</td>
+    <td>{{itmemp.Gender}}</td>
+    <td>{{itmemp.IsMarried}}</td>
+    <td>{{itmemp.CountryName}}</td>
+    <td>{{itmemp.RegionName}}</td>
+  </tr>
+</table>
+</div>
